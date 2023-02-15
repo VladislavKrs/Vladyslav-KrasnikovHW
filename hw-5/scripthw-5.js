@@ -24,15 +24,15 @@ const cityOfResidence = prompt('Місто вашого проживання');
 let cityMessage;
        
     switch (true) {
-        case "Київ" === "Київ, Вашингтон, Лондон": {
+        case cityOfResidence === "Київ": {
             cityMessage = "Ти живеш в столиці України";
             break;
         }
-        case "Вашингтон" === "Київ, Вашингтон, Лондон": {
+        case cityOfResidence === "Вашингтон": {
             cityMessage = "Ти живеш в столиці CША";
             break;
         }
-        case "Лондон" === "Київ, Вашингтон, Лондон": {
+        case cityOfResidence === "Лондон": {
             cityMessage = "Ти живеш в столиці Великобританії";
             break;
         }
@@ -54,15 +54,15 @@ const favoriteSport = prompt('Ваш улюблений вид спорту');
 let sportMessage;
 
     switch (true) {
-        case "Футбол" === "Футбол, Бокс, Баскетбол": {
+        case favoriteSport === "Футбол": {
             sportMessage = "Круто! Хочеш стати як Ліонель Мессі?";
             break;
         }
-        case "Бокс" === "Футбол, Бокс, Баскетбол": {
+        case favoriteSport === "Бокс": {
             sportMessage = "Круто! Хочеш стати як Віталій Кчичко?";
             break;
         }
-        case "Баскетбол"  === "Футбол, Бокс, Баскетбол": {
+        case favoriteSport === "Баскетбол": {
             sportMessage = "Круто! Хочеш стати як Леброн Джеймс?";
             break;
         }
@@ -73,6 +73,9 @@ let sportMessage;
         case favoriteSport.trim() === '' : {
             sportMessage = "Шкода, що Ви не захотіли ввести свій улюблений вид спорт";
             break;
+        }
+        default: {
+            sportMessage = "Ваш улюблений вид спорту " + favoriteSport;
         }
     }
 
