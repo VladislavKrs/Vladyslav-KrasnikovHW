@@ -23,14 +23,16 @@ for (let i = 1; i <= 100; i++) {
 
 let k = 18;
 let simpleNumber = true;
-for (let i = 2; i <= k; i++) {
-  if (k % i === 0) {
-    simpleNumber = false;
-    break;
+
+for (let i = 2; i < k; i++) {
+    if (i % k === 0) {
+        simpleNumber = false;
+        break;
+    }
+
 }
-  console.log(i);
-  const message = simpleNumber ? 'число просте' : 'число не просте';
-}
+let massageNumber = simpleNumber ? 'число просте' : 'число не просте';
+console.log(massageNumber);
 
 // 5. Дане деяке число. Визначити, чи можна одержати це число шляхом зведення числа 3 у деякий ступінь. (Наприклад, числа 9, 81 можна отримати, а 13 - не можна).
 
@@ -41,7 +43,7 @@ do {
     s = 3**i;
     i++
 } while (s < p);
-    let massage = s === p ? 'Дорівнює' : 'Не дорівнює'
+    let massage = s === p ? 'Число 49 дорівнює піднесенням в 3 ступень' : 'Число 49 не дорівнює піднесенням в 3 ступень'
 
 console.log(s);
 console.log(massage);
