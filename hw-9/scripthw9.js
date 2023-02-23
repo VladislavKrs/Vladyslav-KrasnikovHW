@@ -58,7 +58,7 @@ let users = [
     let moreMoney = users
         .filter((item) => {
 
-        return item.balance >= "$2,000";
+        return item.balance > "$2,000";
     })
         .map(({phone}) => phone)
     
@@ -68,5 +68,6 @@ let users = [
 
     console.log(`Номера телефонів користувачів у яких баланс більше 2,000$: ${ moreMoney}`);
     console.log(result);
+
 
 
