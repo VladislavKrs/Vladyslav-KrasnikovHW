@@ -55,21 +55,20 @@ let users = [
     }
     ]
 
-    let moreMoney = users
+    {let moreMoney = users
         .filter((item) => {
 
         return item.balance >= "$2,000";
     })
         .map(({phone}) => phone)
-
-    console.log(`Номера телефонів користувачів у яких баланс більше 2,000$: ${ moreMoney}`);
-
+    }
     
-    const result  = users.reduce((current, balance) => {
+    {const result  = users.reduce((current, balance) => {
         
         return +current + +balance.balance.replace(/[$,]/g, '');  }, 0);
 
+    console.log(`Номера телефонів користувачів у яких баланс більше 2,000$: ${ moreMoney}`);
     console.log(result);
-
+}
 
 
