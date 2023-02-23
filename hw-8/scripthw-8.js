@@ -13,6 +13,7 @@ arr.sort((a, b) => {
     return 0;
 }
 })
+
 console.log(arr);}
 
 arr.splice(1, 3);
