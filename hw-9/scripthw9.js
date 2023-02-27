@@ -55,10 +55,11 @@ let users = [
     }
     ]
 
+    let moreTwoTh = "$2,000";
     let moreMoney = users
         .filter((item) => {
 
-        return item.balance > "$2,000";
+        return item.balance.replace(/[$,]/g, '') >= moreTwoTh.replace(/[$,]/g, '');
     })
         .map(({phone}) => phone)
     
