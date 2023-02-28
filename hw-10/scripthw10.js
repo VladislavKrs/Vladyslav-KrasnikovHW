@@ -8,7 +8,6 @@ const numbersWord = [12, 17, 123, `adfdf`, `row`, 58, `food`, 99, -14, -3];
         const length = positiveArr.length;
         return sum / length;
       };
-
     console.log(getAverage(numbersWord));
 
 // 2. Написати функцію doMath(x, znak, y), яка отримує 3 аргументи: числа x і y, рядок znak. У змінній znak може бути: +, -, *, /, %, ^ (ступінь ).Вивести результат математичної дії, вказаної в змінній znak.Обидва числа і знак виходять від користувача.
